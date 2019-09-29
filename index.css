@@ -1,0 +1,45 @@
+body {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    color: white;
+}
+
+.landing {
+    height: 750px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -999;
+    /*background: linear-gradient(#ab4be6 0%, #ffad2b 100%);*/
+}
+.landing .landing-background {;
+
+}
+.landing-content {
+    z-index: 1;
+    height: 750px;
+}
+.landing-img {
+    max-width: 500px;
+    max-height: 500px;
+}
+.bg-about-us, .bg-mobile {
+    background: #46A086;
+}
+.text-darkblue {
+    color: #00006C;
+}
+.bg-services {
+    background: linear-gradient(#ab4be6 0%, #ffad2b 100%);
+}
+.bg-web, .bg-devops {
+    background: #3798DB;
+}
+.bg-tech {
+    background: #2C3E50;
+}
+.bg-contact {
+    background: #E50000;
+}
