@@ -43,3 +43,6 @@ body {
 .bg-contact {
     background: #E50000;
 }
+#mynav {
+    transition: background 0.5s ease-in;
+}
