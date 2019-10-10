@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,88 +11,185 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Abstract</title>
 </head>
+
+
+
 <body>
-        <nav id="mynav" class="navbar fixed-top navbar-expand-lg justify-content-start">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/logo.png" alt="Abstract">
-            </a>
-            <button class="navbar-toggler justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-              <ul class="navbar-nav justify-content-between w-50 text-white">
+
+<header>
+    <nav id="mynav" class="navbar quicksand-bold navbar-expand-lg fixed-top justify-content-center">
+        <img src="assets/logo.png" class="navbar-brand logo text-center">
+        <div class="menu-collapse">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " href="pages/contact/">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Link</a>
+                    <a class="nav-link " href="pages/contact/">Services</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link text-white" href="#">Dropdown</a>
+                    <a class="nav-link " href="pages/contact/">Technologies</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Disabled</a>
+                    <a class="nav-link" href="pages/contact/">Clients</a>
                 </li>
-              </ul>
+                <li class="nav-item">
+                    <a class="nav-link " href="pages/contact/">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="side-menu-overlay d-lg-none"></div>
+    <div class="side-menu d-lg-none midnightblue snowwhite-text">
+        <h5 class="py-5 quicksand-bold"></h5>
+        <span class="close-side-menu"><i class="fa fa-times"></i></span>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item active"><a class="midnightblue-text">Home</a></li>
+            <li class="list-group-item">
+                <a class="snowwhite-text" data-toggle="collapse" href="#about-sm" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    About <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="collapse" id="about-sm">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="pages/about/about-us/">About</a></li>
+                        <!--<li class="list-group-item"><a href="pages/about/how-we-work/">How we work</a></li>-->
+                        <li class="list-group-item"><a href="pages/about/careers/">Careers</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-toggle="collapse" href="#services-sm" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Services <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="collapse" id="services-sm">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="pages/services/full-stack/">Full Stack Development</a></li>
+                        <li class="list-group-item"><a href="pages/services/mobile-app/">Mobile App Development</a></li>
+                        <li class="list-group-item"><a href="pages/services/ecommerce/">eCommerce</a></li>
+                        <li class="list-group-item"><a href="pages/services/iot/">IoT</a></li>
+                        <li class="list-group-item"><a href="pages/services/testing/">Testing</a></li>
+                        <li class="list-group-item"><a href="pages/services/cloud-solutions/">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+            </li><li class="list-group-item"><a class="midnightblue-text" href="pages/contact/">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="landing-screen">
+        <div class="row align-items-stretch landing-data">
+            <div class="col-lg-4 px-0 d-flex align-items-center order-lg-1 order-3">
+                <div class="text-lg-right text-center py-5 w-100 px-0">
+                    <h1 class="snowwhite-bold snowwhite-text"> Alleviate Software Development</h1>
+                    <div class="w-100 py-3"></div>
+                    <h2 class="sunflower-text"> Predictable, Measurable, Scalable, Agile </h2>
+                    <div class="w-100 py-3"></div>
+                    <h5 class="snowwhite-text"> We Power over 100,000,000 Users Worldwide </h5>
+                    <div class="w-100 py-3"></div>
+                </div>
             </div>
-          </nav>
-          <div class="landing">
-              <video autoplay muted loop src="./assets/landing_backround.mp4" class="landing-background"></video>
-          </div>
-        <div class="row landing-content d-flex justify-content-center align-items-center">
-            <div class="col-md-6 d-flex flex-column align-items-end">
-                <h1 class="text-white text-right w-50">
-                    Alleviate Software Development
-                </h1>
-                <p class="text-darkblue text-right">Agile, Tested, Scalable</p>
-            </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-end">
-                <img class="landing-img" src="./assets/landing.png" alt="landing">
+            <div class="col-12 d-lg-none py-1 order-2"></div>
+            <div class="col-lg-8 px-0 order-lg-2 order-1 d-flex justify-content-between flex-column w-100">
+                <div class="text-center h-100">
+                    <img src="assets/assets/landing/landing.png" class="w-100">
+                    <div class="d-lg-none py-1"></div>
+                </div>
+
             </div>
         </div>
-        <div class="row landing-content bg-about-us d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
-            </div>
-            <div class="col-md-6"></div>
+</main>
+<main class="about-us">
+    <div class="container-fluid">
+        <div class="row px-5 mt-g-8">
+            <h2>
+                About Us
+            </h2>
         </div>
-        <div class="row landing-content bg-services d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
+        <div class="row align-items-stretch about-data">
+            <div class="col-lg-6 d-flex align-items-center order-lg-1 order-3">
+                <div class="text-lg-right text-center py-5 w-100 pr-lg-5">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                </div>
             </div>
-            <div class="col-md-6"></div>
-        </div>
-        <div class="row landing-content bg-web d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
+            <div class="col-12 d-lg-none py-1 order-2"></div>
+            <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-between flex-column w-100">
+                <div class="text-center w-100">
+                    <img src="assets/assets/about/about.png" class="w-75">
+                    <div class="d-lg-none py-1"></div>
+                </div>
+
             </div>
-            <div class="col-md-6"></div>
         </div>
-        <div class="row landing-content bg-mobile d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
+    </div>
+</main>
+
+
+<footer class="container-fluid sootblack snowwhite-text p-0">
+    <article class="container">
+        <div class="row pt-5 ">
+            <div class="col-md-4 col-12 d-flex flex-column  text-left ">
+                <h3>Links</h3>
+                <ul class="flat-list">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="pages/about/about-us">About Us</a></li>
+                    <li><a href="pages/about/careers">Careers</a></li>
+                    <li><a href="pages/contact">Contact Us</a></li>
+                </ul>
             </div>
-            <div class="col-md-6"></div>
-        </div>
-        <div class="row landing-content bg-devops d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
+            <div class="col-md-4 col-12 d-flex flex-column  text-left">
+                <h3>Services</h3>
+                <ul class="flat-list">
+                    <li><a href="pages/services/full-stack">Full-Stack Development</a></li>
+                    <li><a href="pages/services/mobile-app">MobileApp Development</a></li>
+                    <li><a href="pages/services/ecommerce">eCommerce</a></li>
+                    <li><a href="pages/services/iot">IOT</a></li>
+                    <li><a href="pages/services/testing">Testing</a></li>
+                    <li><a href="pages/services/cloud-solutions">Cloud Solutions</a></li>
+                </ul>
             </div>
-            <div class="col-md-6"></div>
-        </div>
-        <div class="row landing-content bg-tech d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
+            <div class="col-md-4 col-12 d-flex flex-column  text-left">
+                <h3 class="footer-heading">Get in Touch</h3>
+                <span class="mt-3 footer-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="ml-2">
+                        Vikrant Plaza (Ground Floor),
+                        Near Mahagunpuram,
+                        NH-24, Ghaziabad, 201002.
+                    </span>
+                </span>
+                <div class="w-100 p-2"></div>
+                <span class="footer-mail">
+                    <i class="fas fa-envelope"></i>
+                    <span class="ml-2">info@abstract.in</span>
+                </span>
             </div>
-            <div class="col-md-6"></div>
         </div>
-        <div class="row landing-content bg-contact d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                <img src="./assets/about.png" alt="about">
-            </div>
-            <div class="col-md-6"></div>
-        </div>
+    </article>
+    <div class="container-fluid py-3 mt-3 darkgrey small text-center">
+        © 2019 ABSTRACT TECHNOLOGIES PVT. LTD.
+    </div>
+</footer>
+
+<!--Scripts-->
+
+<script type="text/javascript" src="index.js"></script>
+
 </body>
-<script src="index.js"></script>
+
 </html>
