@@ -1,6 +1,5 @@
 body {
     scroll-behavior: smooth;
-    overflow: scroll;
     color: white;
     overflow-x: hidden;
 }
@@ -13,11 +12,25 @@ h5,h6 {
 }
 #mynav {
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 16px;
+    min-height: 60px;
     transition: background 0.5s ease-in;
+}
+.logo {
+    height: 55px;
 }
 ::-webkit-scrollbar-track{ background-color: white }
 ::-webkit-scrollbar-thumb{ background-color: white;}
+
+/*About Us*/
+.about-heading-bg {
+    position: absolute;
+    left: 100px;;
+}
+
+
+
+
 
 
 /*Bootstrap*/
@@ -52,162 +65,6 @@ input[type=email]:focus,
 input[type=tel]:focus,
 textarea:focus {
     color: white !important;
-}
-
-@media screen and (max-width: 992px){
-
-    .landing-data{
-        height: 100%;
-    }
-
-    .landing-data h1{
-        font-size: 24px;
-    }
-    .landing-data h2{
-        font-size: 20px;
-    }
-    .landing-data h4{
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .bg-cloud{
-        width: 70px;
-        height: 20px;
-    }
-    .bg-cloud-1 {
-        top: 70px;
-        left: 20px;
-    }
-    .bg-cloud-2 {
-        top: 50%;
-        right: -30px;
-    }
-    .bg-cloud-4 {
-        top: 80px;
-        right: 30px;
-    }
-    .flat-slider-descriptions ul
-    {
-        padding-left: 60px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .bg-cloud-1 {
-        display: none;
-    }
-    .bg-cloud-2 {
-        top: 100px;
-        right: -30px;
-    }
-    .bg-cloud-3 {
-        top: 70px;
-        left: -20px;
-    }
-    .bg-cloud-4 {
-        display: none;
-    }
-    .clients-say{
-        padding: 1rem;
-    }
-    .clients-say:before, .clients-say:after{
-        width: 100px;
-    }
-    .clients-say:before{
-        left: -40px;
-    }
-    .clients-say:after{
-        right: -40px;
-    }
-}
-.menu-collapse{
-    top:0px;
-    position: absolute;
-    right: 0;
-    align-self: flex-end;
-    height: 60px;
-    width: 60px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.menu-collapse .bar{
-    background-color: white;
-    height: 2px;
-    border-radius: 2px;
-    margin: 3px 0;
-}
-.bar-1{
-    width: 25px;
-}
-.bar-2{
-    margin-left: 6px !important;
-    width: 19px;
-}
-.bar-3{
-    margin-left: 2px !important;
-    width: 23px;
-}
-.close-side-menu{
-    position: fixed;
-    top:0;
-    right: 0;
-    height: 70px;
-    width: 70px;
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-.side-menu{
-    position: fixed;
-    top:0;
-    /*transform: translateX(100%);*/
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    z-index: 1099;
-    font-size: 20px;
-    text-align: center;
-    /*font-family: QuicksandBold;*/
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.side-menu ul li{
-    min-height: 50px;
-    line-height: 50px;
-}
-.side-menu ul.list-group-flush li{
-    border-color: transparent;
-}
-.side-menu ul.list-group-flush li a{
-    color: white;
-}
-.side-menu-overlay{
-    position: fixed;
-    background-color: rgba(0,0,0,0.6);
-    top:50%;
-    right: 50%;
-    height: 1px;
-    width: 1px;
-    display: none;
-    z-index: 1098;
-}
-.slide-in{
-    /*-webkit-animation: animation-entry 500ms ease-out;*/
-    /*-o-animation: animation-entry 500ms ease-out;*/
-    animation: animation-entry 500ms cubic-bezier(.65,-0.17,.16,1.33);
-    transform: translateX(0);
-}
-.slide-out{
-    -webkit-animation: animation-exit 300ms ease-in-out;
-    -o-animation: animation-exit 300ms ease-in-out;
-    animation: animation-exit 300ms ease-in-out;
-    transform: translateX(100%);
 }
 
 /*Overriding Bootstrap*/

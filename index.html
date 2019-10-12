@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./flat-ui.css">
+    <link rel="stylesheet" href="./colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -17,8 +20,8 @@
 <body>
 
 <header>
-    <nav id="mynav" class="navbar quicksand-bold navbar-expand-lg fixed-top justify-content-center">
-        <img src="assets/logo.png" class="navbar-brand logo text-center">
+    <nav id="mynav" class="navbar navbar-expand-lg fixed-top justify-content-center">
+        <img src="assets/logo.png" class="d-none d-lg-block navbar-brand logo text-center">
         <div class="menu-collapse">
             <span class="bar bar-1"></span>
             <span class="bar bar-2"></span>
@@ -27,7 +30,7 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link " href="pages/contact/">About</a>
+                    <a class="nav-link " href="#about-us">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="pages/contact/">Services</a>
@@ -46,9 +49,9 @@
     </nav>
 
     <div class="side-menu-overlay d-lg-none"></div>
-    <div class="side-menu d-lg-none midnightblue snowwhite-text">
-        <h5 class="py-5 quicksand-bold"></h5>
-        <span class="close-side-menu"><i class="fa fa-times"></i></span>
+    <div class="side-menu d-lg-none">
+        <img src="assets/logo.png" class="navbar-brand logo text-center">
+        <span class="close-side-menu white"><i class="fa fa-times"></i></span>
         <ul class="list-group list-group-flush">
             <li class="list-group-item active"><a class="midnightblue-text">Home</a></li>
             <li class="list-group-item">
@@ -85,12 +88,12 @@
 <main class="landing-screen">
         <div class="row align-items-stretch landing-data">
             <div class="col-lg-4 px-0 d-flex align-items-center order-lg-1 order-3">
-                <div class="text-lg-right text-center py-5 w-100 px-0">
-                    <h1 class="snowwhite-bold snowwhite-text"> Alleviate Software Development</h1>
+                <div class="text-lg-right text-center py-5 w-100 px-4">
+                    <h3> Alleviate Software Development</h3>
                     <div class="w-100 py-3"></div>
-                    <h2 class="sunflower-text"> Predictable, Measurable, Scalable, Agile </h2>
+                    <h4> Predictable, Measurable, Scalable, Agile </h4>
                     <div class="w-100 py-3"></div>
-                    <h5 class="snowwhite-text"> We Power over 100,000,000 Users Worldwide </h5>
+                    <h5> We Power over 100,000,000 Users Worldwide </h5>
                     <div class="w-100 py-3"></div>
                 </div>
             </div>
@@ -104,14 +107,55 @@
             </div>
         </div>
 </main>
-<main class="about-us">
+<main class="about-us" id="about-us">
     <div class="container-fluid">
-        <div class="row px-5 mt-g-8">
+        <div class="row px-5 py-10">
             <h2>
                 About Us
+                <svg class="about-heading-bg" xmlns="http://www.w3.org/2000/svg" width="368" height="86" viewBox="0 0 368 86">
+                    <text id="About_Us" data-name="About Us" transform="translate(1 68)" font-size="70" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800" letter-spacing="0.05em" opacity="0.1"><tspan x="0" y="0">About</tspan><tspan y="0" font-family="Montserrat-Medium, Montserrat" font-weight="500"> </tspan><tspan y="0">Us</tspan></text>
+                </svg>
             </h2>
         </div>
-        <div class="row align-items-stretch about-data">
+        <div class="row mt-lg-0 mt-5 align-items-stretch about-data">
+            <div class="col-lg-6 d-flex align-items-center order-lg-1 order-3">
+                <div class="text-lg-right text-center py-5 w-100 pr-lg-5">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 d-lg-none py-1 order-2"></div>
+            <div class="col-lg-6 order-lg-2 order-1 d-flex justify-content-between flex-column w-100">
+                <div class="text-center w-100">
+                    <img src="assets/assets/about/about.png" class="w-75">
+                    <div class="d-lg-none py-1"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="services" id="services">
+    <div class="container-fluid">
+        <div class="row px-5 py-10">
+            <h2>
+                Services
+                <svg class="about-heading-bg" xmlns="http://www.w3.org/2000/svg" width="368" height="86" viewBox="0 0 368 86">
+                    <text id="Services" data-name="Services" transform="translate(1 68)" font-size="70" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800" letter-spacing="0.05em" opacity="0.1"><tspan x="0" y="0">Services</tspan></text>
+                </svg>
+            </h2>
+        </div>
+        <div class="row mt-lg-0 mt-5 align-items-stretch about-data">
             <div class="col-lg-6 d-flex align-items-center order-lg-1 order-3">
                 <div class="text-lg-right text-center py-5 w-100 pr-lg-5">
                     <p>
