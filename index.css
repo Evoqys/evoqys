@@ -28,8 +28,46 @@ h5,h6 {
     left: 100px;;
 }
 
+/*Services*/
+.middle-design-left {
+    padding-right: 4rem !important;
+}
+.middle-design-right {
+    padding-left: 4rem !important;
+}
+.design {
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.16);
+    transition: background, color 1s ease-in;
+}
+.design.selected {
+    background: linear-gradient(#0db3c7 0%, #18e9dc 100%);
+}
+.design.selected > .design-data {
+    color: #FFFFFF;
+}
+.design-data {
+    position: absolute;
+    top: 22px;
+    transform: rotate(-45deg);
+}
+.service-icon {
+    width: 50px;
+}
+#mobile-icon {
+    height: 50px;
+    width: 30px;
+}
 
 
+.design-data > h6 {
+    font-family: Poiret One;
+    font-size: 20px;
+    margin-top: 7px;
+}
 
 
 
