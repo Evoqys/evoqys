@@ -55,38 +55,58 @@ $('#webdev').on('click', () => {
     $('#mobile').removeClass('selected');
     $('#devops').removeClass('selected');
     $('#fullstack').removeClass('selected');
-    $('#devops-icon').attr('src', './assets/assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/assets/services/webwhite.png');
-    $('#mobile-icon').attr('src', './assets/assets/services/mobileblack.png');
-    $('#fullstack-icon').attr('src', './assets/assets/services/fullstackblack.png');
+    $('#devops-icon').attr('src', './assets/services/devopsblack.png');
+    $('#webdev-icon').attr('src', './assets/services/webwhite.png');
+    $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
+    $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
 });
 $('#mobile').on('click', () => {
     $('#mobile').addClass('selected');
     $('#webdev').removeClass('selected');
     $('#devops').removeClass('selected');
     $('#fullstack').removeClass('selected');
-    $('#devops-icon').attr('src', './assets/assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/assets/services/webblack.png');
-    $('#mobile-icon').attr('src', './assets/assets/services/mobilewhite.png');
-    $('#fullstack-icon').attr('src', './assets/assets/services/fullstackblack.png');
+    $('#devops-icon').attr('src', './assets/services/devopsblack.png');
+    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#mobile-icon').attr('src', './assets/services/mobilewhite.png');
+    $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
 });
 $('#devops').on('click', () => {
     $('#devops').addClass('selected');
     $('#mobile').removeClass('selected');
     $('#webdev').removeClass('selected');
     $('#fullstack').removeClass('selected');
-    $('#devops-icon').attr('src', './assets/assets/services/devopswhite.png');
-    $('#webdev-icon').attr('src', './assets/assets/services/webblack.png');
-    $('#mobile-icon').attr('src', './assets/assets/services/mobileblack.png');
-    $('#fullstack-icon').attr('src', './assets/assets/services/fullstackblack.png');
+    $('#devops-icon').attr('src', './assets/services/devopswhite.png');
+    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
+    $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
 });
 $('#fullstack').on('click', () => {
     $('#fullstack').addClass('selected');
     $('#mobile').removeClass('selected');
     $('#devops').removeClass('selected');
     $('#webdev').removeClass('selected');
-    $('#devops-icon').attr('src', './assets/assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/assets/services/webblack.png');
-    $('#mobile-icon').attr('src', './assets/assets/services/mobileblack.png');
-    $('#fullstack-icon').attr('src', './assets/assets/services/fullstackwhite.png');
+    $('#devops-icon').attr('src', './assets/services/devopsblack.png');
+    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
+    $('#fullstack-icon').attr('src', './assets/services/fullstackwhite.png');
+});
+
+// CAROUSEL
+$('#recipeCarousel').carousel({
+    interval: 10000
+});
+
+$('.carousel .carousel-item').each(function(){
+    var next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length>0) {
+        next.next().children(':first-child').clone().appendTo($(this));
+    }
+    else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
 });

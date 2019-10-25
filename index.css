@@ -1,7 +1,7 @@
 body {
     scroll-behavior: smooth;
     color: white;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 h1,
 h2,
@@ -21,11 +21,22 @@ h5,h6 {
 }
 ::-webkit-scrollbar-track{ background-color: white }
 ::-webkit-scrollbar-thumb{ background-color: white;}
-
+.section-heading {
+    font-size: 50px;
+    font-family: Montserrat;
+    font-weight: bold;
+}
 /*About Us*/
 .about-heading-bg {
     position: absolute;
-    left: 100px;;
+    left: 10%;
+    max-width: 300px;
+}
+@media only screen and (max-width: 320px) {
+    .about-heading-bg {
+        left: 10%;
+        width: 250px;
+    }
 }
 
 /*Services*/
@@ -70,6 +81,32 @@ h5,h6 {
 }
 
 
+/*Clients*/
+.clients {
+}
+
+
+
+/*CaROUSEL */
+.carousel-item.active {
+    display: flex !important;
+}
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    display: none;
+    transform: translateX(33.33%);
+}
+
+.carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-prev {
+    display: none;
+    transform: translateX(-33.33%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{
+    transform: translateX(0);
+}
 
 /*Bootstrap*/
 
