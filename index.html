@@ -86,7 +86,7 @@
 </header>
 
 <main class="landing-screen">
-        <div class="row align-items-stretch landing-data">
+        <div class="row align-items-stretch landing-data m-0">
             <div class="col-lg-4 px-0 d-flex align-items-center order-lg-1 order-3">
                 <div class="text-lg-right text-center py-5 w-100 px-4">
                     <h3> Alleviate Software Development</h3>
@@ -110,24 +110,21 @@
 <main class="about-us" id="about-us">
     <div class="container-fluid">
         <div class="row px-5 py-10">
-            <h2>
+            <h1 class="text-bolder">
                 About Us
-                <img src="assets/about/aboutHeader.png" class="about-heading-bg">
-            </h2>
+            </h1>
+            <img src="assets/about/aboutHeader.png" class="about-heading-bg">
         </div>
         <div class="row mt-lg-0 mt-5 align-items-stretch about-data">
             <div class="col-lg-6 d-flex align-items-center order-lg-1 order-3">
                 <div class="text-lg-right text-center py-5 w-100 pr-lg-5">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua.Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
+                        We just don’t build products, we build Businesses.
+                        Want to clear the IT To-Do’s off your desk TODAY? Navigate to Abstract.
+                        We assure you with unscrewed outsourcing and help you get the most out of technology, showing you the “WHY” not just the “HOW”.
+                        We put real costs in front of you from day one.
+                        We have the experience and expertise to create a realistic scope up front and to price it appropriately so you know what you’re paying for from the very beginning.
+                        Also, we put genuine buffer on the estimates, as per Hofstadter’s Law, to account for requirement changes.
                     </p>
                 </div>
             </div>
@@ -146,7 +143,7 @@
 <main class="services" id="services">
     <div class="container-fluid">
         <div class="row px-5 py-10">
-            <h1>
+            <h1 class="text-bolder">
                 Services
             </h1>
             <img src="assets/services/servicesHeader.png" class="about-heading-bg">
@@ -216,6 +213,12 @@
 </main>
 <main class="clients my-5" id="clients">
     <div class="container-fluid text-center my-3">
+        <div class="row px-5 py-10 mb-5 d-flex justify-content-center">
+            <h1 class="text-center w-100 text-bolder">
+                Clients
+            </h1>
+            <img src="assets/client/clientsHeaderBackground.png" class="client-heading-bg d-none d-lg-block">
+        </div>
         <div class="row">
             <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
@@ -255,31 +258,102 @@
 
 </main>
 
+<main class="clients my-5" id="contactUs">
+    <div class="container-fluid text-center my-3">
+        <div class="row px-5 py-10 mb-5 d-flex justify-content-center">
+            <h1 class="text-center w-100 text-bolder">
+                Contact Us
+            </h1>
+            <img src="assets/contact/contactUsHeaderBackground.png" class="client-heading-bg d-none d-lg-block">
+        </div>
+    </div>
+    <div class="row mx-3">
+        <div class="col-lg-6 col-12 d-lg-block">
+            <img class="map" src="assets/contact/map.svg" alt="map">
+        </div>
+        <div class="col-lg-6 col-12 bg-gradient">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <div class="input-container">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" id="name" placeholder="Your name"/>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <div class="input-container">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="text" id="email" placeholder="Your email"/>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <div class="input-container">
+                        <label for="contact-no">Subject</label>
+                        <input class="form-control" type="text" id="subject" placeholder="Your Subject"/>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <div class="input-container">
+                        <label for="contact-no">Contact</label>
+                        <input class="form-control" type="text" id="contact-no" placeholder="Your 10-digit contact no"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-container">
+                        <label for="message">Message</label>
+                        <textarea class="form-control text-white" id="message" placeholder="Message"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                   <button class="send-button">Send </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<footer class="container-fluid sootblack snowwhite-text p-0">
-    <article class="container">
-        <div class="row pt-5 ">
-            <div class="col-md-4 col-12 d-flex flex-column  text-left ">
+
+
+</main>
+
+
+<footer class="container-fluid d-inline-block p-0">
+    <div class="container-fluid footer">
+        <div class="row social-links">
+            <div class="col-12 col-lg-6 d-flex justify-content-around">
+                <img class="image-responsive" src="assets/footer/facebook.png" alt="fb">
+                <img class="image-responsive" src="assets/footer/instagram.png" alt="fb">
+                <img class="image-responsive" src="assets/footer/Linkedin_circle.svg_.png" alt="fb">
+                <img class="image-responsive" src="assets/footer/twitter.png" alt="fb">
+            </div>
+        </div>
+        <div class="row mt-5"></div>
+        <div class="row mt-5 d-none d-md-block"></div>
+        <div class="row pt-5 footer-content">
+            <div class="col-12 col-md-3 mt-5"></div>
+            <div class="col-md-3 col-12 d-flex flex-column  text-left ">
                 <h3>Links</h3>
                 <ul class="flat-list">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="pages/about/about-us">About Us</a></li>
-                    <li><a href="pages/about/careers">Careers</a></li>
-                    <li><a href="pages/contact">Contact Us</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-md-4 col-12 d-flex flex-column  text-left">
+            <div class="col-md-3 col-12 d-flex flex-column  text-left">
                 <h3>Services</h3>
                 <ul class="flat-list">
-                    <li><a href="pages/services/full-stack">Full-Stack Development</a></li>
-                    <li><a href="pages/services/mobile-app">MobileApp Development</a></li>
-                    <li><a href="pages/services/ecommerce">eCommerce</a></li>
-                    <li><a href="pages/services/iot">IOT</a></li>
-                    <li><a href="pages/services/testing">Testing</a></li>
-                    <li><a href="pages/services/cloud-solutions">Cloud Solutions</a></li>
+                    <li><a href="#">Full-Stack Development</a></li>
+                    <li><a href="#">MobileApp Development</a></li>
+                    <li><a href="#">eCommerce</a></li>
+                    <li><a href="#">IOT</a></li>
+                    <li><a href="#">Testing</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
                 </ul>
             </div>
-            <div class="col-md-4 col-12 d-flex flex-column  text-left">
+            <div class="col-md-3 col-12 d-flex flex-column  text-left">
                 <h3 class="footer-heading">Get in Touch</h3>
                 <span class="mt-3 footer-address">
                     <i class="fas fa-map-marker-alt"></i>
@@ -294,10 +368,10 @@
                     <span class="ml-2">info@abstract.in</span>
                 </span>
             </div>
+            <div class="container-fluid py-3 small text-center">
+                © 2019 ABSTRACT TECHNOLOGIES PVT. LTD.
+            </div>
         </div>
-    </article>
-    <div class="container-fluid py-3 mt-3 darkgrey small text-center">
-        © 2019 ABSTRACT TECHNOLOGIES PVT. LTD.
     </div>
 </footer>
 

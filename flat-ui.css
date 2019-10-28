@@ -4,20 +4,6 @@
     FLAT-UI CSS
 
     *****
-
-        :root Variables
-        0. Keyframes
-        1. Background Colors
-        2. Text Colors
-        3. Borders
-        4. Components (Buttons, Forms)
-        5. Headings
-        6. Flat UI Cards
-        7. List
-        8. Mobile Menu
-        9. Flat UI Slider
-       10. Diamond Navigation
-
 /* ---------------------- 0. KEYFRAMES ---------------------- */
 
 @keyframes animation-entry {
@@ -160,8 +146,8 @@ textarea:focus{
     position: absolute;
     right: 5px;
     align-self: flex-end;
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
     background: #FFFFFF;
     border-radius: 50%;
     display: none;
@@ -209,7 +195,7 @@ textarea:focus{
     z-index: 1099;
     font-size: 20px;
     text-align: center;
-    /*font-family: Montserrat;*/
+    font-family: Montserrat;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
