@@ -4,16 +4,41 @@ $(document).ready(function(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         isMobile = true;
     }
+    if (isMobile) {
+        console.log(isMobile);
+        $('#servicesCarousel').carousel({
+            interval: 3000
+        });
+    } else {
+        console.log(isMobile);
+        $('#servicesCarousel').carousel({
+            interval: false
+        });
+    }
+    const scroll = $(window).scrollTop();
+    console.log(scroll);
+    if (scroll > 25 && $(document).width() > 991) {
+        $("#mynav").css('background' , "linear-gradient(#1af0de 0%, #017ab1 100%)");
+        $('#logo').attr('src', './assets/logowhite.png');
+        $('#logo').css('height', '60px');
+    }
+    else {
+        $("#mynav").css("background" , "transparent");
+        $('#logo').attr('src', './assets/logoblack.png');
+        $('#logo').css('height', '70px');
+    }
     $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
+        const scroll = $(window).scrollTop();
         console.log(scroll);
         if (scroll > 25 && $(document).width() > 991) {
             $("#mynav").css("background" , "linear-gradient(#1af0de 0%, #017ab1 100%)");
             $('#logo').attr('src', './assets/logowhite.png');
+            $('#logo').css('height', '60px');
         }
         else {
             $("#mynav").css("background" , "transparent");
-            $('#logo').attr('src', './assets/logoblue.png');
+            $('#logo').attr('src', './assets/logoblack.png');
+            $('#logo').css('height', '70px');
         }
     });
 
@@ -93,10 +118,9 @@ $('#fullstack').on('click', () => {
 
 // CAROUSEL
 $('#recipeCarousel').carousel({
-    interval: 10000
+    interval: false
 });
-
-$('.carousel .carousel-item').each(function(){
+$('.multi-item-carousel .carousel-item').each(function(){
     var next = $(this).next();
     if (!next.length) {
         next = $(this).siblings(':first');

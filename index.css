@@ -17,10 +17,11 @@ h5,h6 {
     font-family: Montserrat;
     font-size: 16px;
     min-height: 60px;
-    transition: background 0.5s ease-in;
+    transition: background 0.5s;
 }
 .logo {
-    height: 55px;
+    height: 70px;
+    transition: height 0.75s;
 }
 ::-webkit-scrollbar-track{ background-color: white }
 ::-webkit-scrollbar-thumb{ background-color: white;}
@@ -100,25 +101,26 @@ h5,h6 {
 
 
 /*CaROUSEL */
-.carousel-item.active {
+.multi-item-carousel .carousel-inner > .carousel-item.active {
     display: flex !important;
 }
-.carousel-inner .carousel-item-right.active,
-.carousel-inner .carousel-item-next {
+.multi-item-carousel .carousel-inner .carousel-item-right.active,
+.multi-item-carousel .carousel-inner .carousel-item-next {
     display: none;
     transform: translateX(33.33%);
 }
 
-.carousel-inner .carousel-item-left.active,
-.carousel-inner .carousel-item-prev {
+.multi-item-carousel .carousel-inner .carousel-item-left.active,
+.multi-item-carousel .carousel-inner .carousel-item-prev {
     display: none;
     transform: translateX(-33.33%)
 }
 
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left{
+.multi-item-carousel .carousel-inner .carousel-item-right,
+.multi-item-carousel .carousel-inner .carousel-item-left{
     transform: translateX(0);
 }
+
 
 /*Bootstrap*/
 
@@ -267,7 +269,7 @@ textarea:focus {
     display: inline-block;
     background: linear-gradient(#18e9dc 0%, #0db3c7 100%);
 }
-@media only screen and (min-width: 350px)  {
+@media only screen and (min-width: 578px)  {
     .footer {
         background: transparent;
         display: inline-block;
