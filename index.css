@@ -16,6 +16,9 @@ h5,h6 {
 .montserrat {
     font-family: Montserrat;
 }
+.montserrat-alternates {
+    font-family: Montserrat Alternates;
+}
 .text-bolder {
     font-weight: bolder;
 }
@@ -93,12 +96,17 @@ h5,h6 {
     width: 150px;
     height: 150px;
     transform: rotate(45deg);
+    backgroud-color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.16);
-    transition: background, color 1s ease-in;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
 }
 .design.selected {
-    background: linear-gradient(#0db3c7 0%, #18e9dc 100%);
+    background-color: #0db3c7;
 }
 .design.selected > .design-data {
     color: #FFFFFF;
@@ -126,6 +134,9 @@ h5,h6 {
 
 /*Clients*/
 .clients {
+}
+.client-image {
+    height: 350px;
 }
 .client-heading-bg {
     position: absolute;
