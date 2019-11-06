@@ -10,9 +10,24 @@ h4,
 h5,h6 {
     font-family: Montserrat;
 }
+
+/*FONT CSS*/
+
+.montserrat {
+    font-family: Montserrat;
+}
 .text-bolder {
     font-weight: bolder;
 }
+.text-lighter {
+    font-weight: 100 !important;
+}
+
+.size-3 {
+    font-size: 3rem;
+}
+
+/*Navigation Bar*/
 #mynav {
     font-family: Montserrat;
     font-size: 16px;
@@ -30,6 +45,30 @@ h5,h6 {
     font-family: Montserrat;
     font-weight: bold;
 }
+
+
+/*Landing Css*/
+.landing-heading {
+    color: #A3A3A3;
+}
+.arrow-down {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media only screen and (max-width: 1270px) {
+    .arrow-down {
+        display: none;
+    }
+}
+@media only screen and (max-height: 592px) {
+    .arrow-down {
+        display: none;
+    }
+}
+
 /*About Us*/
 .about-heading-bg {
     position: absolute;
@@ -267,6 +306,7 @@ textarea:focus {
 /*Footer*/
 .footer {
     display: inline-block;
+    color: #ffffff !important;
     background: linear-gradient(#18e9dc 0%, #0db3c7 100%);
 }
 @media only screen and (min-width: 578px)  {
