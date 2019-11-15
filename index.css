@@ -7,7 +7,7 @@ h1,
 h2,
 h3,
 h4,
-h5,h6 {
+h5,h6, span, p {
     font-family: Montserrat;
 }
 
@@ -77,11 +77,13 @@ h5,h6 {
     position: absolute;
     left: 10%;
     max-width: 300px;
+    margin-top: 0;
 }
 @media only screen and (max-width: 350px) {
     .about-heading-bg {
         left: 10%;
         max-width: 250px !important;
+        margin-top: 10px;
     }
 }
 
@@ -116,6 +118,17 @@ h5,h6 {
     top: 22px;
     transform: rotate(-45deg);
 }
+.data-mobile {
+    top: 11px;
+    right: 10px;
+}
+.data-devops {
+    left: -10px;
+}
+.data-fullstack {
+    top: 13px;
+    right: 5px;
+}
 .service-icon {
     width: 50px;
 }
@@ -140,12 +153,21 @@ h5,h6 {
 }
 .client-heading-bg {
     position: absolute;
-    max-width: 300px;
+    max-width: 200px;
+    margin-top: 10px;
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    .contact-heading-bg {
+        position: absolute;
+        width: 240px !important;
+        margin-top: 10px;
+    }
+}
+@media only screen and (min-width: 768px) {
     .client-heading-bg {
         position: absolute;
-        max-width: 250px !important;
+        max-width: 280px !important;
+        margin-top: 0;
     }
 }
 
@@ -236,11 +258,30 @@ textarea:focus {
 
 
 /*Contact Us*/
+.contact-heading-bg {
+    position: absolute;
+    width: 290px;
+    margin-top: 12px;
+}
+@media only screen and (min-width: 768px) {
+    .contact-heading-bg {
+        position: absolute;
+        width: 400px !important;
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width: 350px) and (max-width: 768px) {
+    .contact-heading-bg {
+        position: absolute;
+        width: 300px !important;
+        margin-top: 10px;
+    }
+}
 .bg-gradient {
     border-radius: 26px;
     height: max-content;
     padding: 65px 0;
-    background: linear-gradient(#0fbcca 0%, #085e65 100%);
+    background: linear-gradient(#2faebc 0%,#2faebc 65%, #085e65 100%);
     border: 1px solid #0daebb;
     filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.16));
 }
@@ -268,7 +309,7 @@ textarea:focus {
     align-self: flex-start;
     transform: translateY(-60%) translateX(-10px);
     display: inline-block;
-    background: #0db3c7;
+    background: #2faebc;
     padding: 0 15px;
     opacity: 100%;
     color: white;
@@ -320,7 +361,23 @@ textarea:focus {
     color: #ffffff !important;
     background: linear-gradient(#18e9dc 0%, #0db3c7 100%);
 }
-@media only screen and (min-width: 578px)  {
+.social-links {
+    margin: 10px 0px;
+}
+.image-responsive {
+    height: 50px;
+}
+.copyright {
+    background: #000;
+}
+.footer-content {
+    display: block;
+    padding-top: 0 !important;
+}
+.space-div {
+    display: none !important;
+}
+@media only screen and (min-width: 600px)  {
     .footer {
         background: transparent;
         display: inline-block;
@@ -329,16 +386,13 @@ textarea:focus {
         background-size: cover;
         background-position: center;
     }
-}
-.social-links {
-    margin: 90px 0px;
-}
-.image-responsive {
-    height: 50px;
-}
-.copyright {
-    background: #6FF9E4;
-}
-.footer-content {
-    display: block;
+    .social-links {
+        margin: 90px 0 !important;
+    }
+    .footer-content {
+        padding-top: 3rem !important;
+    }
+    .space-div {
+        display: flex !important;;
+    }
 }

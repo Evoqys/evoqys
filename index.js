@@ -74,47 +74,62 @@ $(".menu-collapse")
     });
 
 // Services Animation
-
-$('#webdev').on('click', () => {
-    $('#webdev').addClass('selected');
+const awsService = $('#service-aws');
+const devOpsService = $('#service-devops');
+const fulStack = $('#service-fullstack');
+const mobileService = $('#service-mobile');
+let currentService = awsService;
+$('#aws-coontroller').on('click', () => {
+    $('#aws-coontroller').addClass('selected');
     $('#mobile').removeClass('selected');
     $('#devops').removeClass('selected');
     $('#fullstack').removeClass('selected');
     $('#devops-icon').attr('src', './assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/services/webwhite.png');
+    $('#aws-coontroller-icon').attr('src', './assets/services/webwhite.png');
     $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
     $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
+    changeSelectedService(awsService);
 });
 $('#mobile').on('click', () => {
     $('#mobile').addClass('selected');
-    $('#webdev').removeClass('selected');
+    $('#aws-coontroller').removeClass('selected');
     $('#devops').removeClass('selected');
     $('#fullstack').removeClass('selected');
     $('#devops-icon').attr('src', './assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#aws-coontroller-icon').attr('src', './assets/services/webblack.png');
     $('#mobile-icon').attr('src', './assets/services/mobilewhite.png');
     $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
+    changeSelectedService(mobileService);
 });
 $('#devops').on('click', () => {
     $('#devops').addClass('selected');
     $('#mobile').removeClass('selected');
-    $('#webdev').removeClass('selected');
+    $('#aws-coontroller').removeClass('selected');
     $('#fullstack').removeClass('selected');
     $('#devops-icon').attr('src', './assets/services/devopswhite.png');
-    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#aws-coontroller-icon').attr('src', './assets/services/webblack.png');
     $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
     $('#fullstack-icon').attr('src', './assets/services/fullstackblack.png');
+    changeSelectedService(devOpsService);
 });
 $('#fullstack').on('click', () => {
     $('#fullstack').addClass('selected');
     $('#mobile').removeClass('selected');
     $('#devops').removeClass('selected');
-    $('#webdev').removeClass('selected');
+    $('#aws-coontroller').removeClass('selected');
     $('#devops-icon').attr('src', './assets/services/devopsblack.png');
-    $('#webdev-icon').attr('src', './assets/services/webblack.png');
+    $('#aws-coontroller-icon').attr('src', './assets/services/webblack.png');
     $('#mobile-icon').attr('src', './assets/services/mobileblack.png');
     $('#fullstack-icon').attr('src', './assets/services/fullstackwhite.png');
+    changeSelectedService(fulStack);
 });
+
+function changeSelectedService(selected) {
+    currentService.fadeOut(250, () => {
+        selected.fadeIn(250);
+        currentService = selected;
+    });
+}
 
 // CAROUSEL
 $('#recipeCarousel').carousel({
