@@ -41,11 +41,79 @@ $(document).ready(function(){
             $('#logo').css('height', '70px');
         }
     });
-
+    activateSmoothScroll();
+    activateTechnologyScroller();
 });
 
+function activateTechnologyScroller() {
+    const scroller = $('#scroller div.innerScrollArea');
+    const scrollerContent = scroller.children('ul');
+    scrollerContent.children().clone().appendTo(scrollerContent);
+    let curX = 0;
+    scrollerContent.children().each(function(){
+        const $this = $(this);
+        $this.css('left', curX);
+        curX += $this.outerWidth(true);
+    });
+    const fullW = curX / 2;
+    const viewportW = scroller.width();
+
+    // Scrolling speed management
+    const controller = {curSpeed:0, fullSpeed:2};
+    const $controller = $(controller);
+    const tweenToNewSpeed = function(newSpeed, duration)
+    {
+        if (duration === undefined)
+            duration = 600;
+        $controller.stop(true).animate({curSpeed:newSpeed}, duration);
+    };
+
+    // Pause on hover
+    scroller.hover(function(){
+        tweenToNewSpeed(0);
+    }, function(){
+        tweenToNewSpeed(controller.fullSpeed);
+    });
+
+    // Scrolling management; start the automatical scrolling
+    const doScroll = function()
+    {
+        const curX = scroller.scrollLeft();
+        let newX = curX + controller.curSpeed;
+        if (newX > fullW*2 - viewportW)
+            newX -= fullW;
+        scroller.scrollLeft(newX);
+    };
+    setInterval(doScroll, 20);
+    tweenToNewSpeed(controller.fullSpeed);
+}
+
+function activateSmoothScroll() {
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            const hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top -80
+            }, 0, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+
+            });
+        } // End if
+    });
+}
+
 // Side Menu
-var tempScroll;
+let tempScroll;
 $(".side-menu").addClass("d-none");
 $(".side-menu-overlay")
     .fadeOut()
@@ -136,7 +204,7 @@ $('#recipeCarousel').carousel({
     interval: false
 });
 $('.multi-item-carousel .carousel-item').each(function(){
-    var next = $(this).next();
+    let next = $(this).next();
     if (!next.length) {
         next = $(this).siblings(':first');
     }

@@ -1,5 +1,9 @@
-body {
+html {
     scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth !important;
     color: white;
     overflow-x: hidden !important;
 }
@@ -9,6 +13,12 @@ h3,
 h4,
 h5,h6, span, p {
     font-family: Montserrat;
+}
+@media only screen and (max-width: 360px) {
+
+    h1 {
+        font-size: 2rem !important;
+    }
 }
 
 /*FONT CSS*/
@@ -27,7 +37,13 @@ h5,h6, span, p {
 }
 
 .size-3 {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+@media only screen and (min-width: 360px) {
+
+    .size-3 {
+        font-size: 3rem;
+    }
 }
 
 /*Navigation Bar*/
@@ -144,6 +160,94 @@ h5,h6, span, p {
     margin-top: 7px;
 }
 
+/*Technologies*/
+.technology-heading-bg {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    left: 0;
+    width: 90%;
+}
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+    .technology-heading-bg {
+        position: absolute;
+        width: 340px !important;
+        margin-top: 10px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .technology-heading-bg {
+        position: absolute;
+        max-width: 580px !important;
+        margin-top: -0px;
+        left: 10%;
+    }
+}
+#scroller {
+    position: relative;
+}
+#scroller .innerScrollArea {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#scroller ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+#scroller li {
+    padding: 0;
+    margin: 0 50px;
+    list-style-type: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.li-back {
+    height: auto;
+    width: 300px;
+    position: absolute;
+    top: -50px;
+    bottom: 0;
+    left: -55px;
+    right: 0;
+    z-index: -10;
+}
+.img-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tech-row {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: 0;
+}
+.tech-container {
+    width: 50%;
+    height: 50%;
+    margin: 0 30px;
+}
+.tech-container > img {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+}
 
 /*Clients*/
 .clients {
