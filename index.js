@@ -1,42 +1,37 @@
-
-$(document).ready(function(){
+$(document).ready(function () {
     let isMobile = false;
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         isMobile = true;
     }
     if (isMobile) {
-        console.log(isMobile);
         $('#servicesCarousel').carousel({
             interval: 3000
         });
     } else {
-        console.log(isMobile);
         $('#servicesCarousel').carousel({
             interval: false
         });
     }
     const scroll = $(window).scrollTop();
-    console.log(scroll);
     if (scroll > 25 && $(document).width() > 991) {
-        $("#mynav").css('background' , "linear-gradient(#1af0de 0%, #017ab1 100%)");
+        $("#mynav").css('background', "linear-gradient(#1af0de 0%, #017ab1 100%)");
         $('#logo').attr('src', './assets/logowhite.png');
         $('#logo').css('height', '60px');
     }
     else {
-        $("#mynav").css("background" , "transparent");
+        $("#mynav").css("background", "transparent");
         $('#logo').attr('src', './assets/logoblack.png');
         $('#logo').css('height', '70px');
     }
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         const scroll = $(window).scrollTop();
-        console.log(scroll);
         if (scroll > 25 && $(document).width() > 991) {
-            $("#mynav").css("background" , "linear-gradient(#1af0de 0%, #017ab1 100%)");
+            $("#mynav").css("background", "linear-gradient(#1af0de 0%, #017ab1 100%)");
             $('#logo').attr('src', './assets/logowhite.png');
             $('#logo').css('height', '60px');
         }
         else {
-            $("#mynav").css("background" , "transparent");
+            $("#mynav").css("background", "transparent");
             $('#logo').attr('src', './assets/logoblack.png');
             $('#logo').css('height', '70px');
         }
@@ -50,7 +45,7 @@ function activateTechnologyScroller() {
     const scrollerContent = scroller.children('ul');
     scrollerContent.children().clone().appendTo(scrollerContent);
     let curX = 0;
-    scrollerContent.children().each(function(){
+    scrollerContent.children().each(function () {
         const $this = $(this);
         $this.css('left', curX);
         curX += $this.outerWidth(true);
@@ -59,28 +54,26 @@ function activateTechnologyScroller() {
     const viewportW = scroller.width();
 
     // Scrolling speed management
-    const controller = {curSpeed:0, fullSpeed:2};
+    const controller = {curSpeed: 0, fullSpeed: 2};
     const $controller = $(controller);
-    const tweenToNewSpeed = function(newSpeed, duration)
-    {
+    const tweenToNewSpeed = function (newSpeed, duration) {
         if (duration === undefined)
             duration = 600;
-        $controller.stop(true).animate({curSpeed:newSpeed}, duration);
+        $controller.stop(true).animate({curSpeed: newSpeed}, duration);
     };
 
     // Pause on hover
-    scroller.hover(function(){
+    scroller.hover(function () {
         tweenToNewSpeed(0);
-    }, function(){
+    }, function () {
         tweenToNewSpeed(controller.fullSpeed);
     });
 
     // Scrolling management; start the automatical scrolling
-    const doScroll = function()
-    {
+    const doScroll = function () {
         const curX = scroller.scrollLeft();
         let newX = curX + controller.curSpeed;
-        if (newX > fullW*2 - viewportW)
+        if (newX > fullW * 2 - viewportW)
             newX -= fullW;
         scroller.scrollLeft(newX);
     };
@@ -89,7 +82,7 @@ function activateTechnologyScroller() {
 }
 
 function activateSmoothScroll() {
-    $("a").on('click', function(event) {
+    $("a").on('click', function (event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -102,8 +95,8 @@ function activateSmoothScroll() {
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
-                scrollTop: $(hash).offset().top -80
-            }, 0, function(){
+                scrollTop: $(hash).offset().top - 80
+            }, 0, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
 
@@ -128,6 +121,14 @@ $(".side-menu-overlay")
 $(".close-side-menu")
     .on("click", function () {
         $(".side-menu-overlay").click();
+    });
+$(".list-group-item")
+    .on("click", function () {
+        const scrollToId = $('.list-group-item').get(1).id;
+        console.log(scrollToId);
+        $('html, body').animate({
+            scrollTop: $(scrollToId).offset().top
+        }, 0);
     });
 $(".menu-collapse")
     .on("click", function () {
@@ -199,18 +200,18 @@ function changeSelectedService(selected) {
     });
 }
 
-// CAROUSEL
-$('#recipeCarousel').carousel({
+// Client CAROUSEL
+$('#clientCarousel').carousel({
     interval: false
 });
-$('.multi-item-carousel .carousel-item').each(function(){
+$('.multi-item-carousel .carousel-item').each(function () {
     let next = $(this).next();
     if (!next.length) {
         next = $(this).siblings(':first');
     }
     next.children(':first-child').clone().appendTo($(this));
 
-    if (next.next().length>0) {
+    if (next.next().length > 0) {
         next.next().children(':first-child').clone().appendTo($(this));
     }
     else {

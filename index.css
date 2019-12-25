@@ -148,6 +148,12 @@ h5,h6, span, p {
 .service-icon {
     width: 50px;
 }
+@media only screen and (max-width: 990px) {
+    #servicesCarousel {
+        min-height: 600px;
+    }
+}
+
 #mobile-icon {
     height: 50px;
     width: 30px;
