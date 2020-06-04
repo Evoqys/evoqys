@@ -506,3 +506,7 @@ textarea:focus {
         display: flex !important;;
     }
 }
+
+.footer-header {
+    font-weight: 900;
+}
